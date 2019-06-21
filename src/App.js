@@ -7,7 +7,12 @@ export const App = () => {
   return (
     <Fragment>
       <span className="value">{count}</span>
-      <button id="inc" onClick={ () => setCount(count + 1) }>Incrementa</button>
+      <button
+        id="inc"
+        onClick={ () => setCount(count + 1) }
+      >
+        Incrementa
+      </button>
     </Fragment>
   );
 };
