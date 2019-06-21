@@ -1,28 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Fragment, useState } from 'react';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      count: 0
-    }
-  }
+export const App = () => {
 
-  onClick(e) {
-      this.setState({
-          count: this.state.count + 1
-      });
-  }
+  const [count, setCount] = useState(0)
 
-  render() {
-    return (
-      <div>
-        <span className="value">{this.state.count}</span>
-        <button id="inc" onClick={this.onClick.bind(this)}>Incrementa</button>
-      </div>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <span className="value">{count}</span>
+      <button id="inc" onClick={ () => setCount(count + 1) }>Incrementa</button>
+    </Fragment>
+  );
+};
 
 export default App;
